@@ -1,0 +1,15 @@
+[Desktop Entry]
+Comment=Multiboot header structure.
+Encoding=UTF-8
+Icon=multibootusb
+Name=Multiboot header structure
+ServiceTypes=KPluginInfo
+Type=Service
+X-KDE-PluginInfo-Author=Maxim Logaev
+X-KDE-PluginInfo-Category=structure/js
+X-KDE-PluginInfo-Email=maximlogaev2001ezro@gmail.com
+X-KDE-PluginInfo-EnabledByDefault=false
+X-KDE-PluginInfo-License=GPL
+X-KDE-PluginInfo-Name=multiboot
+X-KDE-PluginInfo-Version=1.0
+X-KDE-PluginInfo-Website=https://github.com/turbocat2001/okteta-multiboot-plugin
