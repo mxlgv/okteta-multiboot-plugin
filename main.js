@@ -28,7 +28,7 @@ const MULTIBOOT_MEMORY_INFO = 0x00000002 // Must pass memory information to OS.
 const MULTIBOOT_VIDEO_MODE  = 0x00000004 // Must pass video information to OS.
 const MULTIBOOT_AOUT_KLUDGE = 0x00010000 // This flag indicates the use of the address fields in the header.
 
-const VALID_FLAGS = MULTIBOOT_PAGE_ALIGN & MULTIBOOT_MEMORY_INFO & MULTIBOOT_VIDEO_MODE & MULTIBOOT_AOUT_KLUDGE
+const VALID_FLAGS = MULTIBOOT_PAGE_ALIGN | MULTIBOOT_MEMORY_INFO | MULTIBOOT_VIDEO_MODE | MULTIBOOT_AOUT_KLUDGE
 
 function validate_header() 
 {
@@ -37,7 +37,7 @@ function validate_header()
         return false;
     }
 
-    if (this.flags.value & VALID_FLAGS) {
+    if (this.flags.value & ~VALID_FLAGS) {
         this.validationError = "Bad flags"
         return false;
     }
